@@ -1,0 +1,28 @@
+{
+  "name": "vue-msteams-core-composable",
+  "version": "0.0.1",
+  "description": "Core MS-Teams-functionality for Vue3 Applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "Vue",
+    "MSTeams"
+  ],
+  "author": "Cahllagerfeld",
+  "license": "MIT",
+  "devDependencies": {
+    "@microsoft/teams-js": "^1.10.0",
+    "typescript": "^4.3.4",
+    "vue": "^3.1.2"
+  },
+  "peerDependencies": {
+    "@microsoft/teams-js": "^1.10.0",
+    "vue": "^3.1.2"
+  }
+}
