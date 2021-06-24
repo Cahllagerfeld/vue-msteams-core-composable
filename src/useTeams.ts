@@ -23,12 +23,12 @@ export function checkTeams(): boolean {
   return false;
 }
 
-export default function useTeams(): useTeamsResult {
-  const context = ref<microsoftTeams.Context>();
+export function useTeams(): useTeamsResult {
+  const context = ref<microsoftTeams.Context | undefined>(undefined);
   const isInTeams = ref<boolean>(false);
   watchEffect(() => {
     isInTeams.value = checkTeams();
-    if (isInTeams) {
+    if (isInTeams.value === true) {
       microsoftTeams.initialize(() => {
         microsoftTeams.getContext((msTeamsContext: microsoftTeams.Context) => {
           context.value = msTeamsContext;
